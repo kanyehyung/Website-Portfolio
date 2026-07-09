@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SOFIA // PORTFOLIO</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Atmosphere layers -->
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+  <div class="stripe-right"></div>
+  <div class="stripe-right2"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+
+  <!-- Transition wipe overlay -->
+  <div class="wipe" id="wipe"></div>
+
+  <!-- ===================== MAIN LAYOUT ===================== -->
+  <!-- Invisible strip on left edge that triggers menu on hover -->
+  <div class="menu-hover-zone" id="menuHoverZone"></div>
+
+  <div class="layout">
+
+    <!-- LEFT: Menu -->
+    <nav class="menu" id="menu">
+
+      <!-- Hamburger (always peeking out) -->
+      <div class="menu-trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Top label -->
+      <div class="menu-top-label">// SELECT</div>
+
+      <!-- Menu items -->
+      <div class="menu-items">
+        <a class="menu-item active" data-section="about"    href="#" tabindex="0">
+          <div class="item-highlight"></div>
+          <span class="item-num">01</span>
+          <span class="item-label">ABOUT ME</span>
+        </a>
+        <a class="menu-item" data-section="projects"  href="#" tabindex="0">
+          <div class="item-highlight"></div>
+          <span class="item-num">02</span>
+          <span class="item-label">PROJECTS</span>
+        </a>
+        <a class="menu-item" data-section="courses"   href="#" tabindex="0">
+          <div class="item-highlight"></div>
+          <span class="item-num">03</span>
+          <span class="item-label">COURSES</span>
+        </a>
+        <a class="menu-item" data-section="certs"     href="#" tabindex="0">
+          <div class="item-highlight"></div>
+          <span class="item-num">04</span>
+          <span class="item-label">CERTS</span>
+        </a>
+        <a class="menu-item" data-section="contact"   href="#" tabindex="0">
+          <div class="item-highlight"></div>
+          <span class="item-num">05</span>
+          <span class="item-label">CONTACT</span>
+        </a>
+      </div>
+
+      <!-- Bottom identity -->
+      <div class="menu-identity">
+        <div class="identity-name">SOFIA</div>
+        <div class="identity-sub">kanyehyung · UC SANTA CRUZ · CS</div>
+        <a href="https://github.com/kanyehyung" target="_blank" rel="noopener noreferrer" class="identity-github">GITHUB ↗</a>
+      </div>
+
+      <!-- Keyboard hint -->
+      <div class="key-hint">
+        <span class="key">↑↓</span> NAVIGATE &nbsp; <span class="key">↵</span> CONFIRM
+      </div>
+
+    </nav>
+
+    <!-- RIGHT: Content panels -->
+    <main class="panels" id="panels">
+
+      <!-- ── ABOUT ── -->
+      <section class="panel active" id="panel-about">
+        <div class="panel-header">
+          <span class="panel-num">01</span>
+          <h2 class="panel-title">ABOUT ME</h2>
+        </div>
+        <div class="panel-body">
+          <div class="about-layout">
+
+            <!-- Photo column -->
+            <div class="about-photo-col">
+              <div class="photo-frame">
+                <img src="assets/photos/updated pfp.png" alt="Sofia" class="photo-img"/>
+              
+                <div class="photo-corner tl"></div>
+                <div class="photo-corner tr"></div>
+                <div class="photo-corner bl"></div>
+                <div class="photo-corner br"></div>
+              </div>
+              <div class="photo-id">
+                <span class="photo-id-name">SOFIA DANG</span>
+                <span class="photo-id-role">CS · NETWORK SECURITY · MACHINE LEARNING · WEB DEV</span>
+              </div>
+            </div>
+
+            <!-- Info column -->
+            <div class="about-info-col">
+              <p class="panel-text">Recent graduate from <strong>UC Santa Cruz</strong>, concentrating in <strong>network security</strong>, <strong>machine learning</strong>, and <strong>website design</strong>. Seeking roles in IT, cybersecurity, full-stack, and software engineering.</p>
+              <p class="panel-text">Throughout my 4 years at UCSC, I was a member of the <strong>BEES Program</strong> (Baskin Engineering Excellence Scholars) and <strong>MESA Program</strong> (Mathematics, Engineering, Science, Achievement). Currently, I am studying for the <strong>CompTIA Security+</strong> and <strong>Azure Administrator Associate</strong> (AZ-104) certifications.</p>
+              <p class="panel-text">In my free time, I enjoy playing RPG and FPS games, going to soccer pick ups, and watching anime/tv/movies/sports.</p>
+              
+            <!-- Technologies box -->
+            <div class="logo-box">
+              <div class="logo-box-label">// TECHNOLOGIES</div>
+              <div class="logo-grid">
+                <div class="logo-item"><img src="assets/logos/python.webp" class="logo-img"/><span>Python</span></div>
+                <div class="logo-item"><img src="assets/logos/C_Programming_Language.svg.webp" class="logo-img"/><span>C</span></div>
+                <div class="logo-item"><img src="assets/logos/PHP-logo.svg.webp" class="logo-img"/><span>PHP</span></div>
+                <div class="logo-item"><img src="assets/logos/JavaScript-Symbol.png" class="logo-img"/><span>JavaScript</span></div>
+                <div class="logo-item"><img src="assets/logos/CSS-Logo-2011.png" class="logo-img"/><span>CSS</span></div>
+                <div class="logo-item"><img src="assets/logos/html-logo.png" class="logo-img"/><span>HTML</span></div>
+                <div class="logo-item"><img src="assets/logos/microsoft-365-copilot-logo-png_seeklogo-501781.png" class="logo-img"/><span>Microsoft 365</span></div>
+                <div class="logo-item"><img src="assets/logos/Git_icon.svg.webp" class="logo-img"/><span>Git</span></div>
+                <div class="logo-item"><img src="assets/logos/docker-mark-ocean-blue.png" class="logo-img"/><span>Docker</span></div>
+              </div>
+            </div>
+
+            <!-- Education & Programs box -->
+            <div class="logo-box logo-box-edu">
+              <div class="logo-box-label">// EDUCATION & PROGRAMS</div>
+              <div class="logo-grid">
+                <div class="logo-item"><img src="assets/logos/UC Santa Cruz Logo - White.png" class="logo-img"/><span>UC Santa Cruz</span></div>
+                <div class="logo-item"><img src="assets/logos/bees-ucsc.png" class="logo-img"/><span>BEES</span></div>
+                <div class="logo-item"><img src="assets/logos/mesa-ucsc.png" class="logo-img"/><span>MESA</span></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PROJECTS ── -->
+      <section class="panel" id="panel-projects">
+        <div class="panel-header">
+          <span class="panel-num">02</span>
+          <h2 class="panel-title">PROJECTS</h2>
+        </div>
+        <div class="panel-body">
+          <p class="panel-sub">// FETCHED LIVE FROM GITHUB</p>
+          <div class="projects-grid" id="projectsGrid">
+            <div class="p5-loading">ACCESSING DATABASE<span class="blink">_</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── COURSES ── -->
+      <section class="panel" id="panel-courses">
+        <div class="panel-header">
+          <span class="panel-num">03</span>
+          <h2 class="panel-title">COURSES</h2>
+        </div>
+        <div class="panel-body">
+          <div class="course-list">
+            <div class="course-row">
+              <span class="course-code">CSE 153</span>
+              <span class="course-name">Network Security &amp; Privacy</span>
+              <span class="course-tag">SECURITY</span>
+            </div>
+            <div class="course-row">
+              <span class="course-code">CSE 140</span>
+              <span class="course-name">Artificial Intelligence / ML</span>
+              <span class="course-tag">AI/ML</span>
+            </div>
+            <div class="course-row">
+              <span class="course-code">CSE 114A</span>
+              <span class="course-name">Functional Programming (Haskell)</span>
+              <span class="course-tag">PL</span>
+            </div>
+            <div class="course-row">
+              <span class="course-code">CSE 130</span>
+              <span class="course-name">Operating Systems</span>
+              <span class="course-tag">SYSTEMS</span>
+            </div>
+            <div class="course-row">
+              <span class="course-code">CSE 185</span>
+              <span class="course-name">Technical Writing</span>
+              <span class="course-tag">WRITING</span>
+            </div>
+            <div class="course-row">
+              <span class="course-code">CSE 100</span>
+              <span class="course-name">Computer Architecture / FPGA</span>
+              <span class="course-tag">HW</span>
+            </div>
+            <div class="course-row">
+              <span class="course-code">CSE 101M</span>
+              <span class="course-name">Discrete Math</span>
+              <span class="course-tag">MATH</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CERTS ── -->
+      <section class="panel" id="panel-certs">
+        <div class="panel-header">
+          <span class="panel-num">04</span>
+          <h2 class="panel-title">CERTIFICATIONS</h2>
+        </div>
+        <div class="panel-body">
+          <div class="cert-list">
+            <div class="cert-row">
+              <div class="cert-icon">★</div>
+              <div class="cert-info">
+                <span class="cert-name">CompTIA A+</span>
+                <span class="cert-desc">IT support fundamentals</span>
+              </div>
+              <span class="cert-badge in-progress">IN PROGRESS</span>
+            </div>
+            <div class="cert-row locked">
+              <div class="cert-icon">◆</div>
+              <div class="cert-info">
+                <span class="cert-name">CompTIA Security+</span>
+                <span class="cert-desc">Security fundamentals</span>
+              </div>
+              <span class="cert-badge upcoming">UPCOMING</span>
+            </div>
+            <div class="cert-row">
+              <div class="cert-icon">✦</div>
+              <div class="cert-info">
+                <span class="cert-name">Humanizing Technology Certificate</span>
+                <span class="cert-desc">UC Santa Cruz · Baskin Engineering</span>
+              </div>
+              <span class="cert-badge earned">EARNED</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CONTACT ── -->
+      <section class="panel" id="panel-contact">
+        <div class="panel-header">
+          <span class="panel-num">05</span>
+          <h2 class="panel-title">CONTACT</h2>
+        </div>
+        <div class="panel-body">
+          <p class="panel-sub">// SEND A TRANSMISSION</p>
+          <div id="formMsg" class="form-msg hidden"></div>
+          <div class="p5-form">
+            <div class="p5-field">
+              <label>NAME //</label>
+              <input type="text" id="name" placeholder="YOUR NAME"/>
+            </div>
+            <div class="p5-field">
+              <label>EMAIL //</label>
+              <input type="email" id="email" placeholder="YOUR EMAIL"/>
+            </div>
+            <div class="p5-field">
+              <label>MESSAGE //</label>
+              <textarea id="message" rows="4" placeholder="WHAT'S THE MISSION?"></textarea>
+            </div>
+            <button class="btn-p5" onclick="submitForm()">TRANSMIT ▶</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
