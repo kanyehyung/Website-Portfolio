@@ -11,7 +11,7 @@
   --font-d:  'Bebas Neue', sans-serif;
   --font-b:  'Rajdhani', sans-serif;
   --font-m:  'Share Tech Mono', monospace;
-  --menu-w:  340px;
+  --menu-w:  305px;
   --trans:   0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -171,9 +171,7 @@ a { text-decoration: none; color: inherit; }
   background: var(--red);
   transition: background 0.15s, width 0.2s;
 }
-.menu-trigger span:nth-child(2) { width: 13px; }
 .menu:hover .menu-trigger span { background: var(--white); }
-.menu:hover .menu-trigger span:nth-child(2) { width: 18px; }
 
 .menu-top-label {
   font-family: var(--font-m);
@@ -261,9 +259,14 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: 0.08em;
   margin-top: 4px;
 }
+.identity-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
 .identity-github {
   display: inline-block;
-  margin-top: 8px;
   font-family: var(--font-m);
   font-size: 0.72rem;
   color: var(--red);
