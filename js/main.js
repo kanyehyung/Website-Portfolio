@@ -141,6 +141,19 @@ const LANG_COLORS = {
   Haskell:'#5e5086', CSS:'#563d7c', Shell:'#89e051',
 };
 
+function getExtraTags(repoName) {
+  const tags = {
+    'Website-Portfolio': ['HTML', 'JavaScript', 'PHP', 'Docker'],
+    'SlugShack': ['Python', 'Streamlit', 'Flowise'],
+  };
+  const name = repoName.toLowerCase();
+  const match = Object.keys(tags).find(k => name.includes(k.toLowerCase()));
+  if (!match) return '';
+  return tags[match]
+    .map(t => `<span class="project-tag">${t}</span>`)
+    .join('');
+}
+
 async function fetchRepos() {
   if (reposFetched) return;
   const grid = document.getElementById('projectsGrid');
@@ -159,17 +172,18 @@ async function fetchRepos() {
       card.rel    = 'noopener noreferrer';
       card.classList.add('project-card');
 
-      const langColor = LANG_COLORS[repo.language] || '#cc0000';
-      const stars     = repo.stargazers_count > 0 ? `★ ${repo.stargazers_count}` : '';
+      const lc = LANG_COLORS[repo.language] || '#cc0000';
+      const st     = repo.stargazers_count > 0 ? `★ ${repo.stargazers_count}` : '';
 
+      const extraTags = getExtraTags(repo.name);
       card.innerHTML = `
         <div class="project-name">${repo.name.toUpperCase()}</div>
         <p class="project-desc">${repo.description || 'No description provided.'}</p>
         <div class="project-foot">
-          ${repo.language ? `<span class="project-lang"><span class="lang-dot" style="background:${langColor}"></span>${repo.language.toUpperCase()}</span>` : ''}
-          ${stars ? `<span class="project-stars">${stars}</span>` : ''}
-        </div>
-      `;
+          ${repo.language ? `<span class="project-tag">${repo.language}</span>` : ''}
+          ${extraTags}
+          ${st ? `<span class="project-stars">${st}</span>` : ''}
+        </div>`;
       card.addEventListener('mouseenter', playHover);
       card.addEventListener('click', playClick);
       grid.appendChild(card);

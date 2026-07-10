@@ -2,6 +2,7 @@
 :root {
   --red:     #cc0000;
   --red2:    #ff1a1a;
+  --red3:    #fb6d6d;
   --black:   #232323;
   --black2:  #232323;
   --black3:  #2a2a2a;
@@ -458,8 +459,8 @@ a { text-decoration: none; color: inherit; }
 /* ── PROJECTS ── */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 12px;
 }
 .p5-loading {
   grid-column: 1/-1;
@@ -475,12 +476,13 @@ a { text-decoration: none; color: inherit; }
 .project-card {
   background: var(--black3);
   border-left: 2px solid var(--red);
-  padding: 18px 20px;
+  padding: 24px 24px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   transition: background 0.18s, border-color 0.18s;
   cursor: none;
+  min-height: 160px;
 }
 .project-card:hover {
   background: #1f1f1f;
@@ -488,20 +490,38 @@ a { text-decoration: none; color: inherit; }
 }
 .project-name {
   font-family: var(--font-d);
-  font-size: 1.15rem;
+  font-size: 1.65rem;
   letter-spacing: 0.08em;
   color: var(--white);
 }
 .project-desc {
-  font-size: 0.82rem;
-  color: var(--gray);
-  line-height: 1.6;
+  font-size: 0.97 rem;
+  color: var(--gray2);
+  line-height: 1;
   flex: 1;
 }
 .project-foot {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.project-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #2a2a2a;
+  border: 0.5px solid #3a3a3a;
+  font-family: var(--font-m);
+  font-size: 0.65rem;
+  color: var(--red3);
+  letter-spacing: 0.06em;
+}
+.project-foot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
 }
 .project-lang {
   font-family: var(--font-m);
